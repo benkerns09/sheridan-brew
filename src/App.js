@@ -1,19 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import {
+  Route,
+  NavLink,
+  HashRouter
+} from "react-router-dom";
+
+import Home from "./Home";
+import Order from "./Order";
+import Auth from "./Auth";
 
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+    return(
+        <HashRouter>
+          <div>
+            <h1>Sheridan Brew</h1>
+            <ul className="header">
+              <li><NavLink exact to="/">Home</NavLink></li>
+              <li><NavLink to="/auth">Log In / Sign Up</NavLink></li>
+              <li><NavLink to="/order">Order</NavLink></li>
+              
+            </ul>
+            <div className="content">
+              <Route exact path="/" component={Home}/>
+              <Route path="/order" component={Order}/>
+              <Route path="/auth" component={Auth}/>
+            </div>
+            
+          </div>
+        </HashRouter>
     );
   }
 }
