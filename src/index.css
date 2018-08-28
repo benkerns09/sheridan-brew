@@ -1,16 +1,13 @@
 body {
-    background-color: #FFCC00;
+    background-color: rgba(251, 255, 0, 0.048);
     padding: 20px;
     margin: 0;
 }
 
-h1, h2, p, ul, li {
-    font-family: sans-serif;
+h1 {
+    color: green;
+    font-family: cursive;
     text-align: center;
-}
-
-h2 {
-    font-size: 30px;
 }
 
 ul.header li {
@@ -22,6 +19,7 @@ ul.header li {
 ul.header {
     background-color: #111;
     padding: 0;
+    text-align: center;
 }
 
 ul.header li a {
@@ -32,20 +30,11 @@ ul.header li a {
     display: inline-block;
 }
 
-.content {
-    background-color: #FFF;
-    padding: 20px;
-}
-
-.content h2 {
-    padding: 0;
-    margin: 0;
-}
-
-.content li {
-    margin-bottom: 10px;
-}
-
 .active {
-    background-color: #0099FF;
+    background-color: lightgreen;
+}
+
+.App-logo {
+    width: 5%;
+    height: auto;
 }
