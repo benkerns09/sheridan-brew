@@ -12,6 +12,10 @@ import Auth from "./Auth";
 import Logo from './Logo.png';
 import Login from "./Login";
 import SignUp from "./SignUp";
+import TakeMoney from "./Stripe";
+
+//these will run at specific points when we are creating or tearing down react components
+//this way when someone leaves the application, the component will unmount
 
 class App extends Component {
   render() {
@@ -23,6 +27,7 @@ class App extends Component {
               <li><NavLink exact to="/">Home</NavLink></li>
               <li><NavLink to="/auth">Log In / Sign Up</NavLink></li>
               <li><NavLink to="/order">Order</NavLink></li>
+              <li><NavLink to="/stripe">Add A Card</NavLink></li>
             </ul>
             <div className="content">
               <Route exact path="/" component={Home}/>
@@ -30,6 +35,7 @@ class App extends Component {
               <Route path="/auth" component={Auth}/>
               <Route path="/login" component={Login}/>
               <Route path="/signup" component={SignUp}/>
+              <Route path="/stripe" component={TakeMoney}/>
             </div>
             
           </div>

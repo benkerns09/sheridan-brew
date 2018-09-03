@@ -148,8 +148,7 @@ class Order extends Component {
                                     </select>
                                 </div>
 
-                                <div className="orderBtn">
-                                    <button type="button" id="order" class="btn btn-primary btn-lg btn-block">Place Order</button>
+                                <div className="orderButton">
                                 </div>
                                     <button type="button" class="btn btn-light">Reset</button>
                             </form>
@@ -158,10 +157,13 @@ class Order extends Component {
 
                 <div id="order list">
                 </div>
-
+            <div className="orderButton">
+            </div>
             </div>
         );
     }
 }
+
+
 
 export default Order;
